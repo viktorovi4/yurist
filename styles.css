@@ -102,7 +102,7 @@ body {
 /* Остальные стили для остальных элементов страницы */
 /* Стили для hero-секции */
 .hero-section {
-    background-image: url('hero.jpg'); /* Укажите путь к изображению */
+    background-image: url('1.jpg'); /* Укажите путь к изображению */
     background-size: cover;
     background-position: center;
     color: white;
