@@ -22,7 +22,6 @@
             <div class="header-right">
                 <p>+7 980-888-62-62</p>
                 <div class="social-links">
-                    <!-- Ссылки на Телеграмм и Ватсап с иконками -->
                     <a href="https://t.me/your_telegram_link" target="_blank">
                         <i class="fab fa-telegram-plane"></i>
                     </a>
@@ -37,6 +36,9 @@
 
     <!-- Меню -->
     <nav class="main-menu">
+        <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul>
             <li><a href="#">Услуги</a></li>
             <li><a href="#">Стоимость</a></li>
@@ -85,24 +87,17 @@
         </div>
     </section>
 
-<!-- Модальное окно для формы обратного звонка -->
+    <!-- Модальное окно для формы обратного звонка -->
     <div id="callbackModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Введите ваш номер телефона</h2>
-            <!-- Обновленная форма с использованием FormSubmit -->
             <form id="callbackForm" action="https://formsubmit.co/alexsapan@mail.ru" method="POST">
-                <!-- Скрытые поля для защиты и конфигурации -->
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://viktorovi4.github.io/yurist/thank-you.html">
                 <input type="hidden" name="_template" value="table">
-                <!-- Поле ввода ФИО -->
                 <input type="text" name="name" placeholder="Ваше ФИО" required>
-                
-                <!-- Поле ввода номера телефона -->
                 <input type="text" name="phone" placeholder="Ваш номер телефона" required>
-                    
-                <!-- Кнопка отправки формы -->
                 <button type="submit">Отправить</button>
             </form>
         </div>
@@ -110,15 +105,15 @@
 
     <!-- Блок с тремя столбцами -->
     <section class="statistics">
-        <div class="stat-item" style="background-color: #F5F5DC;">
+        <div class="stat-item">
             <h1>10</h1>
             <p>лет успешной юридической практики</p>
         </div>
-        <div class="stat-item" style="background-color: #F5F5DC;">
+        <div class="stat-item">
             <h1>20</h1>
             <p>среднее количество консультаций в месяц</p>
         </div>
-        <div class="stat-item" style="background-color: #F5F5DC;">
+        <div class="stat-item">
             <h1>560</h1>
             <p>успешных дел</p>
         </div>
@@ -139,6 +134,7 @@
             <img src="калькулятор.jpg" alt="Калькулятор">
         </div>
     </section>
+
     <!-- Блок команды -->
     <section class="team">
         <h2>Наша команда</h2>
@@ -157,15 +153,14 @@
             <p>Автор курса для юристов и наставничества по судебным процессам</p>
         </div>
     </section>
- 
-        <!-- Блок выигранных дел -->
+
+    <!-- Блок выигранных дел -->
     <section class="cases">
         <h2>Выигранные дела</h2>
         <div class="case-gallery">
-            <img src="images/дело.jpg" alt="Дело 1">
-            <img src="images/дело.jpg" alt="Дело 2">
-            <img src="images/дело.jpg" alt="Дело 3">
-            <!-- Добавьте столько фотографий, сколько нужно -->
+            <img src="case1.jpg" alt="Дело 1">
+            <img src="case2.jpg" alt="Дело 2">
+            <img src="case3.jpg" alt="Дело 3">
         </div>
     </section>
 
@@ -179,18 +174,19 @@
         </form>
     </section>
 
-    <!-- Подвал -->
+    <!-- Подвал с контактной информацией и картой -->
     <footer>
         <div class="footer-content">
-            <p>Город Рязань, адрес ул. Почтовая 65 офис 63</p>
-            <p>&copy; 2024 Все права защищены. Адвокатский кабинет Инессы Александровны</p>
+            <h3>Контактная информация</h3>
+            <p>Адрес: г. Рязань, пл. Соборная, д.2 (офис 1)</p>
+            <p>Телефон: +7 980-888-62-62</p>
+            <p>Email: example@mail.ru</p>
         </div>
-        <!-- Карта Google -->
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.2212148138774!2d37.617609815929!3d55.75582698055259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab6f9b0cfebe3%3A0x82924b1e6bff4af7!2z0J3QuNC60L7Qu9GM0L3Ri9C5INGB0YLRgNC-0LHQvtCy0LAg0L_QtdGA0LXQt9C10L3RgtGB0LrQsNGPINGD0LsuLCA2NQ!5e0!3m2!1sru!2sru!4v1637058972347!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCUyeL2sxD" width="100%" height="400" frameborder="0"></iframe>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
