@@ -1,122 +1,120 @@
-/* Общие стили */
+/* Основные стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Адаптивные стили для заголовка */
 header {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 15px;
+    background-color: #f9f9f9; /* Светлый фон для шапки */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .header-left, .header-center, .header-right {
     flex: 1;
-    text-align: center;
-    margin: 10px;
 }
 
 .header-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: right;
 }
 
-.header-right p {
-    margin-bottom: 5px;
+.social-links a {
+    margin: 0 5px;
+    color: #333;
+    font-size: 18px;
 }
 
 .callback-btn {
-    background-color: #e74c3c;
-    color: white;
+    background-color: #ff6b6b;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 15px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    border-radius: 5px;
 }
 
 .callback-btn:hover {
-    background-color: #c0392b;
+    background-color: #e55a5a;
 }
 
-.social-links i {
-    font-size: 24px;
-    margin: 0 10px;
-    color: white;
-}
-
-/* Адаптивные стили для меню */
+/* Меню */
 .main-menu {
-    background-color: #34495e;
+    background-color: #2c3e50; /* Темно-синий фон */
     padding: 10px 0;
-}
-
-.main-menu ul {
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-.main-menu li a {
-    color: #fff;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-.main-menu li a:hover {
-    background-color: #2c3e50;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-}
-
-/* Стили для секций */
-.hero-section {
-    background-image: url('1.jpg'); /* Замените на реальный путь к изображению */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
     position: relative;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin: 0 15px;
+}
+
+.main-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-toggle {
+    display: none; /* Скрыть кнопку меню на десктопе */
+}
+
+/* Стили для адаптивного меню */
+@media (max-width: 768px) {
+    .main-menu ul {
+        display: none; /* Скрыть меню по умолчанию */
+        flex-direction: column;
+        background-color: #2c3e50;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .main-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Показать кнопку меню */
+        color: #fff;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+}
+
+.hero-section {
+    background: url('1.jpg') no-repeat center center/cover; /* Фото на фоне */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
 }
 
 .hero-content h1 {
@@ -124,213 +122,92 @@ header {
     margin-bottom: 20px;
 }
 
-.hero-content p {
+.hero-content p, .hero-content ul {
     font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.hero-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.hero-content ul li {
-    text-align: left;
-    margin: 5px 0;
+    margin-bottom: 10px;
 }
 
 .consultation-btn {
-    background-color: #e74c3c;
-    color: white;
+    background-color: #ff6b6b;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    font-size: 18px;
+    border-radius: 8px;
 }
 
 .consultation-btn:hover {
-    background-color: #c0392b;
+    background-color: #e55a5a;
 }
 
-/* Стили для секции услуг */
 .services-section {
-    padding: 50px 20px;
+    background-color: #f3f3f3;
+    padding: 60px 20px;
     text-align: center;
-    background-color: #ecf0f1;
-}
-
-.services-section h2 {
-    margin-bottom: 30px;
-    color: #2c3e50;
 }
 
 .services-container {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .service-card {
-    flex: 1 1 calc(33.333% - 20px);
-    margin: 10px;
+    width: 300px;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f5f5dc;
+    padding: 40px 20px;
     text-align: center;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
+.stat-item h1 {
+    font-size: 36px;
+    color: #e74c3c;
 }
 
-.service-card img {
-    max-width: 100%;
-    border-radius: 10px;
+.pricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    background-color: #f3f3f3;
 }
 
-.service-card h3 {
-    color: #34495e;
-    margin-top: 15px;
+.pricing-details {
+    flex: 1;
 }
 
-.service-card p {
-    color: #7f8c8d;
+.pricing-image {
+    flex: 1;
+    text-align: center;
 }
 
-/* Адаптивные стили для формы обратного звонка */
-.modal-content {
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.modal-content h2 {
-    margin-bottom: 20px;
-}
-
-.modal-content input,
-.modal-content button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.modal-content button {
-    background-color: #e74c3c;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.modal-content button:hover {
-    background-color: #c0392b;
-}
-
-/* Стили для блока команды */
 .team {
-    padding: 50px 20px;
+    background-color: #fff;
+    padding: 60px 20px;
     text-align: center;
-    background-color: #ecf0f1;
 }
 
-.team h2 {
-    margin-bottom: 30px;
-    color: #2c3e50;
+.cases, .contact-form, footer {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.team-member {
-    display: inline-block;
-    width: 45%;
-    margin: 10px;
-    vertical-align: top;
-}
-
-.team-member img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.team-member h3 {
-    color: #34495e;
-    margin-top: 10px;
-}
-
-.team-member p {
-    color: #7f8c8d;
-}
-
-/* Стили для подвала */
 footer {
     background-color: #2c3e50;
     color: #fff;
-    padding: 30px 20px;
-    text-align: center;
 }
 
-.footer-content, .map {
-    flex: 1 1 100%;
-    text-align: center;
-    margin: 10px 0;
+.map {
+    margin-top: 30px;
 }
-
-.footer-content p {
-    margin: 5px 0;
-}
-
-.map iframe {
-    border: none;
-}
-
-/* Адаптивные стили для мобильных устройств */
-@media (max-width: 768px) {
-    .main-menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-menu li {
-        margin: 5px 0;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .header-left, .header-center, .header-right {
-        text-align: center;
-        flex: 1 1 100%;
-    }
-
-    .service-card {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
-    }
-
-    .team-member {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .case-gallery img {
-        margin: 10px auto;
-    }
-
-    footer {
-        padding: 10px;
-    }
-}
-
