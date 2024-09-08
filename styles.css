@@ -102,7 +102,7 @@ header {
 
 /* Стили для секций */
 .hero-section {
-    background-image: url('hero.jpg'); /* Замените на реальный путь к изображению */
+    background-image: url('1.jpg'); /* Замените на реальный путь к изображению */
     background-size: cover;
     background-position: center;
     color: white;
