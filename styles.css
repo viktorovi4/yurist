@@ -1,344 +1,183 @@
+/* Общие стили */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Адаптивные стили для заголовка */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
 }
 
 .header-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+    width: 100%;
 }
 
-.header-left p,
-.header-center p,
-.header-right p {
-    margin: 5px 0;
+.header-left, .header-center, .header-right {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
+.social-links i {
+    font-size: 24px;
+    margin: 0 10px;
 }
 
-.social-links {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-}
-
-.social-links a {
-    margin-right: 10px;
-    color: #007bff;
-    text-decoration: none;
-    font-size: 20px; /* Размер иконок */
-}
-
-.social-links a:hover {
-    color: #0056b3;
-}
-
-.callback-btn {
-    background-color: #af0707;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-}
-
-.callback-btn:hover {
-    background-color: rgb(99, 2, 2);
-}
-
-.main-menu {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 0;
-}
-
+/* Адаптивные стили для меню */
 .main-menu ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
-    margin: 0;
+    justify-content: space-around;
+    list-style: none;
     padding: 0;
 }
 
-.main-menu ul li {
-    margin: 0 15px;
-}
-
-.main-menu ul li a {
-    color: white;
+.main-menu li a {
     text-decoration: none;
+    color: #333;
+    padding: 10px;
 }
 
-.main-menu ul li a:hover {
-    text-decoration: underline;
+.main-menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Стили для текстового блока с кнопкой на фоне фотографии */
+/* Стили для секций */
 .hero-section {
-    background-image: url('1.jpg'); /* Путь к вашей фотографии */
+    background-image: url('hero.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 60px 20px;
-    position: relative;
+    text-align: center;
+    padding: 100px 0;
 }
 
 .hero-content {
     max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    margin-left: 40px; /* Отступ слева */
-    text-align: left; /* Выравнивание текста по левому краю */
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.hero-content h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.hero-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.hero-content ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.consultation-btn {
-    background-color: #800000; /* Бордовый цвет */
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.consultation-btn:hover {
-    background-color: #a00000; /* Темнее бордовый при наведении */
-}
-/* Стили для секции "Услуги" */
-.services-section {
-    padding: 40px 20px;
-    background-color: #f8f8f8;
-}
-
-.services-section h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
+/* Стили для секции услуг */
 .services-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .service-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px; /* Ширина карточки */
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    background-color: #f0f0f0;
+    padding: 20px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.service-card img {
-    width: 100%;
-    height: 200px; /* Высота изображения */
-    object-fit: cover;
-}
-
-.service-card h3 {
-    font-size: 20px;
-    margin: 15px 0;
-    padding: 0 10px;
-}
-
-.service-card p {
-    font-size: 16px;
-    color: #666;
-    padding: 0 10px 20px;
-}
-/* Модальное окно */
-.modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
-}
-
+/* Адаптивные стили для формы обратного звонка */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px; /* Ограничение ширины */
-    border-radius: 10px;
-    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
 }
 
-.modal-content h2 {
-    margin-bottom: 20px;
-}
-
-.modal-content input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.modal-content button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.modal-content button:hover {
-    background-color: #0056b3;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.statistics {
-    display: flex;
-    justify-content: space-between; /* Равномерное распределение пространства */
-    text-align: center;
-    margin: 50px 0;
-    background-color: #F5F5DC; /* Бежевый фон для всего блока */
-    padding: 20px;
-}
-
-.stat-item {
-    flex: 1; /* Каждый элемент занимает равное количество места */
-    padding: 20px;
-    margin: 0 10px; /* Добавляем отступы между столбцами */
-    background-color: #F5F5DC; /* Бежевый фон для каждого столбца */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Легкая тень для эффекта */
-    border-radius: 8px;
-}
-
-.pricing {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
-    gap: 20px; /* Пробел между столбцами */
-}
-
-.pricing-details {
-    width: 50%; /* Половина ширины страницы */
-    font-size: 1.2em; /* Увеличенный размер текста */
-    line-height: 1.8; /* Увеличенный междустрочный интервал */
-}
-
-.pricing-image {
-    width: 50%; /* Половина ширины страницы */
-}
-
-.pricing-image img {
-    width: 100%; /* Картинка масштабируется в пределах контейнера */
-    height: auto; /* Сохраняем пропорции изображения */
-    max-height: 400px; /* Ограничиваем максимальную высоту */
-}
-
+/* Стили для блока команды */
 .team {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0;
+    padding: 50px;
+    text-align: center;
 }
+
 .team-member {
-    text-align: center;
+    display: inline-block;
     width: 45%;
-}
-.cases {
-    text-align: center;
-    margin: 50px 0;
-}
-.case-gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.contact-form {
-    text-align: center;
-    margin: 50px 0;
+    margin: 10px;
+    vertical-align: top;
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column; /* Размещение элементов вертикально */
-    align-items: center;
-    max-width: 600px; /* Ограничиваем ширину формы */
-    margin: 0 auto;
+.team-member img {
+    max-width: 100%;
+    height: auto;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 100%; /* Ширина полей ввода */
-    margin-bottom: 15px; /* Отступы между полями */
-    padding: 10px;
-    font-size: 1.1em; /* Увеличенный размер текста */
-    border: 1px solid #ccc; /* Граница полей */
-    border-radius: 5px; /* Скругленные углы */
+/* Стили для блока выигранных дел */
+.case-gallery img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
 }
 
+/* Стили для подвала */
 footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
     background-color: #f8f8f8;
-    padding: 40px;
+}
+
+.footer-content, .map {
+    flex: 1 1 100%;
     text-align: center;
+    margin: 10px 0;
 }
 
-.footer-content {
-    margin-bottom: 30px; /* Отступ от карты */
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    /* Упрощенное меню */
+    .main-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Стили для заголовка и секций */
+    .header-left, .header-center, .header-right {
+        text-align: center;
+        flex: 1 1 100%;
+    }
+
+    /* Услуги в один столбец */
+    .service-card {
+        flex: 1 1 100%;
+    }
+
+    /* Команда в один столбец */
+    .team-member {
+        width: 100%;
+    }
+
+    /* Блок выигранных дел */
+    .case-gallery img {
+        margin: 10px auto;
+    }
+
+    /* Меньше отступов для подвала */
+    footer {
+        padding: 10px;
+    }
 }
 
-.map {
-    margin-top: 20px;
-}
+@media (max-width: 480px) {
+    /* Уменьшаем размеры текста и изображений */
+    .hero-content h1 {
+        font-size: 24px;
+    }
 
+    .service-card h3, .team-member h3 {
+        font-size: 18px;
+    }
+
+    .stat-item h1 {
+        font-size: 36px;
+    }
+}
