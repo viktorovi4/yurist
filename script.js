@@ -1,4 +1,4 @@
-// Существующий код для модального окна
+// Модальное окно для формы обратного звонка
 var modal = document.getElementById("callbackModal");
 var btn = document.getElementById("callbackBtn");
 var span = document.getElementsByClassName("close")[0];
@@ -20,12 +20,12 @@ window.onclick = function(event) {
     }
 }
 
-// Новый код для раскрывающегося меню на мобильных устройствах
+// Функционал выпадающего меню для мобильных устройств
 document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".main-menu ul");
+    const menuToggle = document.getElementById("menuToggle");
+    const menuList = document.getElementById("menuList");
 
     menuToggle.addEventListener("click", function() {
-        menu.classList.toggle("show-menu");
+        menuList.classList.toggle("show-menu");
     });
 });
