@@ -37,7 +37,6 @@
 
     <!-- Меню -->
     <nav class="main-menu">
-        <button class="menu-toggle" aria-label="Открыть меню"><i class="fas fa-bars"></i></button>
         <ul>
             <li><a href="#">Услуги</a></li>
             <li><a href="#">Стоимость</a></li>
@@ -86,7 +85,7 @@
         </div>
     </section>
 
-    <!-- Модальное окно для формы обратного звонка -->
+<!-- Модальное окно для формы обратного звонка -->
     <div id="callbackModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -111,15 +110,15 @@
 
     <!-- Блок с тремя столбцами -->
     <section class="statistics">
-        <div class="stat-item">
+        <div class="stat-item" style="background-color: #F5F5DC;">
             <h1>10</h1>
             <p>лет успешной юридической практики</p>
         </div>
-        <div class="stat-item">
+        <div class="stat-item" style="background-color: #F5F5DC;">
             <h1>20</h1>
             <p>среднее количество консультаций в месяц</p>
         </div>
-        <div class="stat-item">
+        <div class="stat-item" style="background-color: #F5F5DC;">
             <h1>560</h1>
             <p>успешных дел</p>
         </div>
@@ -140,8 +139,7 @@
             <img src="калькулятор.jpg" alt="Калькулятор">
         </div>
     </section>
-
-    <!-- Блок "Наша команда" -->
+    <!-- Блок команды -->
     <section class="team">
         <h2>Наша команда</h2>
         <div class="team-member">
@@ -159,8 +157,8 @@
             <p>Автор курса для юристов и наставничества по судебным процессам</p>
         </div>
     </section>
-
-    <!-- Блок выигранных дел -->
+ 
+        <!-- Блок выигранных дел -->
     <section class="cases">
         <h2>Выигранные дела</h2>
         <div class="case-gallery">
@@ -181,45 +179,18 @@
         </form>
     </section>
 
-    <!-- Подвал с контактной информацией и картой -->
+    <!-- Подвал -->
     <footer>
         <div class="footer-content">
-            <h3>Контактная информация</h3>
-            <p>Адрес: г. Рязань, ул. Ленина, д. 10</p>
-            <p>Email: info@example.com</p>
-            <p>Телефон: +7 980-888-62-62</p>
+            <p>Город Рязань, адрес ул. Почтовая 65 офис 63</p>
+            <p>&copy; 2024 Все права защищены. Адвокатский кабинет Инессы Александровны</p>
         </div>
+        <!-- Карта Google -->
         <div class="map">
-            <!-- Интеграция карты Яндекс -->
-            <iframe src="https://yandex.ru/map-widget/v1/-/CCUnHMQA" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.2212148138774!2d37.617609815929!3d55.75582698055259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab6f9b0cfebe3%3A0x82924b1e6bff4af7!2z0J3QuNC60L7Qu9GM0L3Ri9C5INGB0YLRgNC-0LHQvtCy0LAg0L_QtdGA0LXQt9C10L3RgtGB0LrQsNGPINGD0LsuLCA2NQ!5e0!3m2!1sru!2sru!4v1637058972347!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Скрипт для модального окна обратного звонка
-        var modal = document.getElementById("callbackModal");
-        var btn = document.getElementById("callbackBtn");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // Скрипт для мобильного меню
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.main-menu ul').classList.toggle('show');
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
