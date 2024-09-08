@@ -411,3 +411,94 @@ footer {
     border: none;
     border-radius: 10px;
 }
+/* Остальные стили для других элементов страницы */
+
+/* Стили для мобильной шапки */
+.mobile-header {
+    display: none; /* По умолчанию скрываем мобильную шапку для десктопов */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #333; /* Цвет фона шапки */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.mobile-header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.whatsapp-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.call-button {
+    position: relative;
+    padding: 10px 15px;
+    background-color: #28a745; /* Зеленый цвет кнопки */
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: 2px solid #28a745;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.call-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hamburger-menu {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff; /* Цвет полосок гамбургера */
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Медиа-запрос для скрытия десктопной шапки и отображения мобильной */
+@media (max-width: 768px) {
+    .header-desktop {
+        display: none; /* Скрываем десктопную шапку */
+    }
+    
+    .mobile-header {
+        display: flex; /* Отображаем мобильную шапку */
+    }
+}
