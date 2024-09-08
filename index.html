@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <!-- Мобильная шапка -->
+    <!-- Мобильная шапка -->
     <header class="mobile-header">
         <div class="mobile-header-content">
             <!-- Значок WhatsApp -->
@@ -23,18 +23,17 @@
                 <span class="call-text">Call</span>
             </a>
 
-           
             <!-- Гамбургер меню -->
             <div class="hamburger-menu">
                 <span>Услуги</span>
                 <span>Команда</span>
                 <span></span>
-            
             </div>
         </div>
     </header>
+
     <!-- Шапка -->
-    <header>
+    <header class="header-desktop">
         <div class="header-container">
             <div class="header-left">
                 <p>Адвокатский кабинет</p>
@@ -88,7 +87,7 @@
     <!-- Блок Услуги -->
     <section class="services-section">
         <h2>Наши Услуги</h2>
-        <div class="services-container">
+        <div class="services-container" id="servicesContainer">
             <div class="service-card">
                 <img src="images/раздел бизнеса.jpg" alt="Раздел бизнеса ИП, ООО при разводе">
                 <h3>Раздел бизнеса ИП, ООО при разводе</h3>
@@ -103,6 +102,10 @@
                 <img src="images/решение сем спор.jpg" alt="Разрешение семейных споров">
                 <h3>Разрешение семейных споров</h3>
                 <p>Разрешение споров по вопросам семьи и детей.</p>
+            </div>
+            <!-- Дополнительные услуги будут скрыты по умолчанию -->
+            <div class="more-services" id="moreServices">
+                <button id="showMoreBtn">Все услуги</button>
             </div>
         </div>
     </section>
@@ -157,6 +160,7 @@
 
     <!-- Блок команды -->
     <section class="team">
+        <h2>Наша команда</h2>
         <div class="team-member">
             <img src="images/юрист1.jpg" alt="Юрист 1">
             <h3>ФИО</h3>
@@ -185,27 +189,19 @@
 
     <!-- Блок с формой для вопроса и номера телефона -->
     <section class="contact-form">
-        <h2>Задайте интересующий вас вопрос</h2>
-        <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-            <textarea name="question" placeholder="Ваш вопрос" rows="5" required></textarea>
+        <h2>Есть вопрос? Оставьте заявку!</h2>
+        <form id="contactForm" action="https://formsubmit.co/alexsapan@mail.ru" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://viktorovi4.github.io/yurist/thank-you.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="name" placeholder="Ваше имя" required>
             <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+            <textarea name="message" placeholder="Ваш вопрос" required></textarea>
             <button type="submit">Отправить</button>
         </form>
     </section>
 
-    <!-- Подвал с контактной информацией и картой -->
-    <footer>
-        <div class="footer-content">
-            <h3>Контактная информация</h3>
-            <p>Адрес: г. Рязань, пл. Соборная, д.2 (офис 1)</p>
-            <p>Телефон: +7 980-888-62-62</p>
-            <p>Email: example@mail.ru</p>
-        </div>
-        <div class="map">
-            <iframe src="https://yandex.ru/maps/-/CDw3ULNO" width="100%" height="400" frameborder="0"></iframe>
-        </div>
-    </footer>
-
+    <!-- Подключение скриптов -->
     <script src="script.js"></script>
 </body>
 </html>
