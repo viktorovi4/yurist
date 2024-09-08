@@ -100,3 +100,314 @@ body {
 }
 
 /* Остальные стили для остальных элементов страницы */
+/* Стили для hero-секции */
+.hero-section {
+    background-image: url('hero.jpg'); /* Укажите путь к изображению */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.hero-content ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.consultation-btn {
+    background-color: #f5a623;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Стили для секции услуг */
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.services-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000; /* Поверх остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Скроллинг при необходимости */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для секции статистики */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.stat-item {
+    max-width: 300px;
+    margin: 10px;
+}
+
+.stat-item h1 {
+    font-size: 3em;
+    color: #007bff;
+}
+
+.stat-item p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Стили для блока стоимости */
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.pricing-details,
+.pricing-image {
+    max-width: 400px;
+    margin: 20px;
+    text-align: center;
+}
+
+.pricing-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-details ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.pricing-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Стили для секции команды */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.team-member {
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Стили для секции выигранных дел */
+.cases {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.cases h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.case-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.case-gallery img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Стили для контактной формы */
+.contact-form {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form textarea,
+.contact-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.map iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
