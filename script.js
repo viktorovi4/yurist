@@ -19,3 +19,11 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".main-menu ul");
+
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("show-menu");
+    });
+});
