@@ -110,7 +110,7 @@ body {
 /* Остальные стили для остальных элементов страницы */
 /* Стили для текстового блока с кнопкой на фоне фотографии */
 .hero-section {
-    background-image: url('1.jpg'); /* Путь к вашей фотографии */
+    background-image: url('images/background.jpg'); /* Путь к вашей фотографии */
     background-size: cover;
     background-position: center;
     color: white;
