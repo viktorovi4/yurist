@@ -131,7 +131,7 @@ header, nav, section {
 
 /* Секция с текстом */
 .hero-section {
-    background: url('images/фон.jpg') no-repeat center center;
+    background: url('images/background.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;
