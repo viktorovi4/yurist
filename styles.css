@@ -334,16 +334,3 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .service-card h3, .team-member h3 {
-        font-size: 18px;
-    }
-
-    .stat-item h1 {
-        font-size: 36px;
-    }
-}
