@@ -28,12 +28,20 @@ body {
     font-size: 20px;
 }
 
-.header-right .callback-btn {
-    background-color: #007bff;
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.callback-btn {
+    background-color: #af0707;
     color: white;
-    padding: 10px 20px;
     border: none;
+    padding: 8px 16px;
     cursor: pointer;
+}
+
+.callback-btn:hover {
+    background-color: rgb(99, 2, 2);
 }
 
 .main-menu {
@@ -100,32 +108,32 @@ body {
 }
 
 /* Остальные стили для остальных элементов страницы */
-/* Стили для hero-секции */
+/* Стили для текстового блока с кнопкой на фоне фотографии */
 .hero-section {
-    background-image: url('1.jpg'); /* Укажите путь к изображению */
+    background-image: url('1.jpg'); /* Путь к вашей фотографии */
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
+    padding: 60px 20px;
     position: relative;
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
     padding: 20px;
     border-radius: 10px;
+    margin-left: 40px; /* Отступ слева */
+    text-align: left; /* Выравнивание текста по левому краю */
 }
 
 .hero-content h1 {
-    font-size: 2.5em;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -137,17 +145,21 @@ body {
 
 .hero-content ul li {
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 16px;
 }
 
 .consultation-btn {
-    background-color: #f5a623;
+    background-color: #800000; /* Бордовый цвет */
     color: white;
-    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
+    padding: 12px 24px;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+.consultation-btn:hover {
+    background-color: #a00000; /* Темнее бордовый при наведении */
 }
 
 /* Стили для секции услуг */
